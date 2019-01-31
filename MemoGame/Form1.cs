@@ -14,7 +14,10 @@ namespace MemoGame
     {
         bool[] if_button_has_color = new bool[17];
         bool[] hidden = new bool[17];
+        bool if_first_try = true;
         Color[] colors = new Color[17];
+        int first_number = 0;
+        int second_number = 0;
 
         public Form1()
         {
@@ -42,7 +45,23 @@ namespace MemoGame
 
         private void button1_Click(object sender, EventArgs e)
         {
-            button1.BackColor = colors[1];
+            if (button1.BackColor != colors[1])
+            {                
+                button1.BackColor = colors[1];
+
+                if (if_first_try == true)
+                {
+                    first_number = 1;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 1;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
         }
 
         private void draw_button(Color color)
@@ -76,6 +95,321 @@ namespace MemoGame
             if (hidden[15] == false) { button1.BackColor = colors[15]; } else { button1.BackColor = Color.Gray; }
             if (hidden[16] == false) { button1.BackColor = colors[16]; } else { button1.BackColor = Color.Gray; }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[2])
+            {
+                button1.BackColor = colors[2];
+
+                if (if_first_try == true)
+                {
+                    first_number = 2;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 2;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[3])
+            {
+                button1.BackColor = colors[3];
+
+                if (if_first_try == true)
+                {
+                    first_number = 3;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 3;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[5])
+            {
+                button1.BackColor = colors[5];
+
+                if (if_first_try == true)
+                {
+                    first_number = 5;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 5;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[4])
+            {
+                button1.BackColor = colors[4];
+
+                if (if_first_try == true)
+                {
+                    first_number = 4;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 4;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[6])
+            {
+                button1.BackColor = colors[6];
+
+                if (if_first_try == true)
+                {
+                    first_number = 6;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 6;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[7])
+            {
+                button1.BackColor = colors[7];
+
+                if (if_first_try == true)
+                {
+                    first_number = 7;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 7;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[8])
+            {
+                button1.BackColor = colors[8];
+
+                if (if_first_try == true)
+                {
+                    first_number = 8;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 8;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[9])
+            {
+                button1.BackColor = colors[9];
+
+                if (if_first_try == true)
+                {
+                    first_number = 9;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 9;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[10])
+            {
+                button1.BackColor = colors[10];
+
+                if (if_first_try == true)
+                {
+                    first_number = 10;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 10;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[12])
+            {
+                button1.BackColor = colors[12];
+
+                if (if_first_try == true)
+                {
+                    first_number = 12;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 12;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[13])
+            {
+                button1.BackColor = colors[13];
+
+                if (if_first_try == true)
+                {
+                    first_number = 13;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 13;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[11])
+            {
+                button1.BackColor = colors[11];
+
+                if (if_first_try == true)
+                {
+                    first_number = 11;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 11;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[14])
+            {
+                button1.BackColor = colors[14];
+
+                if (if_first_try == true)
+                {
+                    first_number = 14;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 14;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[15])
+            {
+                button1.BackColor = colors[15];
+
+                if (if_first_try == true)
+                {
+                    first_number = 15;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 15;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if (button1.BackColor != colors[16])
+            {
+                button1.BackColor = colors[16];
+
+                if (if_first_try == true)
+                {
+                    first_number = 16;
+                    if_first_try = false;
+                }
+                else
+                {
+                    second_number = 16;
+                    if_first_try = true;
+                    check();
+                    color_button();
+                }
+            }
         }
     }
 }
