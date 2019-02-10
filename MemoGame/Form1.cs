@@ -18,6 +18,7 @@ namespace MemoGame
         Color[] colors = new Color[17];
         int first_number = 0;
         int second_number = 0;
+        int moves = 0;
 
         public Form1()
         {
@@ -64,6 +65,36 @@ namespace MemoGame
             }
         }
 
+        private void check()
+        {
+            moves = moves + 1;
+
+            if(colors[first_number] == colors[second_number])
+            {
+                MessageBox.Show("Brawo! Odgadłeś to dupku");
+                hidden[first_number] = false;
+                hidden[second_number] = false;
+            }
+            else
+            {
+                MessageBox.Show("Niestety, pocałuj mnie w dupe");
+            }
+
+            int discovered = 0;
+            for (int g = 1; g < 17; g++)
+            {
+                if (hidden[g] == false)
+                {
+                    discovered++;
+                }
+            }
+
+            if (discovered == 16)
+            {
+                MessageBox.Show("Brawka patafianie, wygrałeś");
+            }
+        }
+
         private void draw_button(Color color)
         {
             Random gen = new Random();
@@ -79,29 +110,29 @@ namespace MemoGame
         private void color_button()
         {
             if (hidden[1] == false) { button1.BackColor = colors[1]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[2] == false) { button1.BackColor = colors[2]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[3] == false) { button1.BackColor = colors[3]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[4] == false) { button1.BackColor = colors[4]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[5] == false) { button1.BackColor = colors[5]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[6] == false) { button1.BackColor = colors[6]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[7] == false) { button1.BackColor = colors[7]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[8] == false) { button1.BackColor = colors[8]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[9] == false) { button1.BackColor = colors[9]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[10] == false) { button1.BackColor = colors[10]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[11] == false) { button1.BackColor = colors[11]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[12] == false) { button1.BackColor = colors[12]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[13] == false) { button1.BackColor = colors[13]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[14] == false) { button1.BackColor = colors[14]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[15] == false) { button1.BackColor = colors[15]; } else { button1.BackColor = Color.Gray; }
-            if (hidden[16] == false) { button1.BackColor = colors[16]; } else { button1.BackColor = Color.Gray; }
+            if (hidden[2] == false) { button2.BackColor = colors[2]; } else { button2.BackColor = Color.Gray; }
+            if (hidden[3] == false) { button3.BackColor = colors[3]; } else { button3.BackColor = Color.Gray; }
+            if (hidden[4] == false) { button4.BackColor = colors[4]; } else { button4.BackColor = Color.Gray; }
+            if (hidden[5] == false) { button5.BackColor = colors[5]; } else { button5.BackColor = Color.Gray; }
+            if (hidden[6] == false) { button6.BackColor = colors[6]; } else { button6.BackColor = Color.Gray; }
+            if (hidden[7] == false) { button7.BackColor = colors[7]; } else { button7.BackColor = Color.Gray; }
+            if (hidden[8] == false) { button8.BackColor = colors[8]; } else { button8.BackColor = Color.Gray; }
+            if (hidden[9] == false) { button9.BackColor = colors[9]; } else { button9.BackColor = Color.Gray; }
+            if (hidden[10] == false) { button10.BackColor = colors[10]; } else { button10.BackColor = Color.Gray; }
+            if (hidden[11] == false) { button11.BackColor = colors[11]; } else { button11.BackColor = Color.Gray; }
+            if (hidden[12] == false) { button12.BackColor = colors[12]; } else { button12.BackColor = Color.Gray; }
+            if (hidden[13] == false) { button13.BackColor = colors[13]; } else { button13.BackColor = Color.Gray; }
+            if (hidden[14] == false) { button14.BackColor = colors[14]; } else { button14.BackColor = Color.Gray; }
+            if (hidden[15] == false) { button15.BackColor = colors[15]; } else { button15.BackColor = Color.Gray; }
+            if (hidden[16] == false) { button16.BackColor = colors[16]; } else { button16.BackColor = Color.Gray; }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[2])
+            if (button2.BackColor != colors[2])
             {
-                button1.BackColor = colors[2];
+                button2.BackColor = colors[2];
 
                 if (if_first_try == true)
                 {
@@ -120,9 +151,9 @@ namespace MemoGame
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[3])
+            if (button3.BackColor != colors[3])
             {
-                button1.BackColor = colors[3];
+                button3.BackColor = colors[3];
 
                 if (if_first_try == true)
                 {
@@ -141,9 +172,9 @@ namespace MemoGame
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[5])
+            if (button5.BackColor != colors[5])
             {
-                button1.BackColor = colors[5];
+                button5.BackColor = colors[5];
 
                 if (if_first_try == true)
                 {
@@ -162,9 +193,9 @@ namespace MemoGame
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[4])
+            if (button4.BackColor != colors[4])
             {
-                button1.BackColor = colors[4];
+                button4.BackColor = colors[4];
 
                 if (if_first_try == true)
                 {
@@ -183,9 +214,9 @@ namespace MemoGame
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[6])
+            if (button6.BackColor != colors[6])
             {
-                button1.BackColor = colors[6];
+                button6.BackColor = colors[6];
 
                 if (if_first_try == true)
                 {
@@ -204,9 +235,9 @@ namespace MemoGame
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[7])
+            if (button7.BackColor != colors[7])
             {
-                button1.BackColor = colors[7];
+                button7.BackColor = colors[7];
 
                 if (if_first_try == true)
                 {
@@ -225,9 +256,9 @@ namespace MemoGame
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[8])
+            if (button8.BackColor != colors[8])
             {
-                button1.BackColor = colors[8];
+                button8.BackColor = colors[8];
 
                 if (if_first_try == true)
                 {
@@ -246,9 +277,9 @@ namespace MemoGame
 
         private void button9_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[9])
+            if (button9.BackColor != colors[9])
             {
-                button1.BackColor = colors[9];
+                button9.BackColor = colors[9];
 
                 if (if_first_try == true)
                 {
@@ -267,9 +298,9 @@ namespace MemoGame
 
         private void button10_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[10])
+            if (button10.BackColor != colors[10])
             {
-                button1.BackColor = colors[10];
+                button10.BackColor = colors[10];
 
                 if (if_first_try == true)
                 {
@@ -288,9 +319,9 @@ namespace MemoGame
 
         private void button12_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[12])
+            if (button12.BackColor != colors[12])
             {
-                button1.BackColor = colors[12];
+                button12.BackColor = colors[12];
 
                 if (if_first_try == true)
                 {
@@ -309,9 +340,9 @@ namespace MemoGame
 
         private void button13_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[13])
+            if (button13.BackColor != colors[13])
             {
-                button1.BackColor = colors[13];
+                button13.BackColor = colors[13];
 
                 if (if_first_try == true)
                 {
@@ -330,9 +361,9 @@ namespace MemoGame
 
         private void button11_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[11])
+            if (button11.BackColor != colors[11])
             {
-                button1.BackColor = colors[11];
+                button11.BackColor = colors[11];
 
                 if (if_first_try == true)
                 {
@@ -351,9 +382,9 @@ namespace MemoGame
 
         private void button14_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[14])
+            if (button14.BackColor != colors[14])
             {
-                button1.BackColor = colors[14];
+                button14.BackColor = colors[14];
 
                 if (if_first_try == true)
                 {
@@ -372,9 +403,9 @@ namespace MemoGame
 
         private void button15_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[15])
+            if (button15.BackColor != colors[15])
             {
-                button1.BackColor = colors[15];
+                button15.BackColor = colors[15];
 
                 if (if_first_try == true)
                 {
@@ -393,9 +424,9 @@ namespace MemoGame
 
         private void button16_Click(object sender, EventArgs e)
         {
-            if (button1.BackColor != colors[16])
+            if (button16.BackColor != colors[16])
             {
-                button1.BackColor = colors[16];
+                button16.BackColor = colors[16];
 
                 if (if_first_try == true)
                 {
